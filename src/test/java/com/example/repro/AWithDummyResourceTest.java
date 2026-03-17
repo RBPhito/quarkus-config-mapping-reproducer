@@ -1,11 +1,12 @@
 package com.example.repro;
 
+import io.quarkus.test.common.WithTestResource;
 import io.quarkus.test.junit.QuarkusTest;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.Test;
 
 @QuarkusTest
-@WithDummyResource
+@WithTestResource(DummyTestResource.class)
 class AWithDummyResourceTest {
 
     @Test
